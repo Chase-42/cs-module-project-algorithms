@@ -3,16 +3,9 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    seen_values = []
-
-    for elem in arr: 
-      if elem in seen_values: 
-          seen_values.remove(elem)
-      else: 
-          seen_values.append(elem)
-
-    return seen_values[0]
-    
+    for num in arr:
+        if arr.count(num) == 1:
+            return num
 
 
 if __name__ == '__main__':
